@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+//Util classes
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.widget-viewport-height {
+  height: $widget-viewport-height;
+}
+
+.none {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+a:not([href]):not([tabindex]) {
+  color: $white;
+  cursor: pointer;
+}
+
+a:not([href]):not([tabindex]):hover {
+  color: $white;
+  cursor: pointer;
+}
+
+a:not([href]):not([tabindex]):focus {
+  color: $white;
+  cursor: pointer;
+}

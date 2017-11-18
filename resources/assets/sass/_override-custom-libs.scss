@@ -1,0 +1,75 @@
+.abc-checkbox, .abc-radio {
+  margin-bottom: 20px;
+
+  label {
+    .abc-label-text {
+      display: inline-block;
+      position: relative;
+      top: 2px;
+      padding-left: 13px;
+    }
+
+    &::before{
+      width: 22px;
+      height: 22px;
+      border: 2px solid $input-border-color;
+      @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out);
+    }
+
+  }
+}
+
+.abc-checkbox {
+  label{
+    &::before{
+      border-radius: 0;
+      @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out);
+    }
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      top: 2px;
+      left: 2px;
+    }
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+
+    &:focus + label::before{
+      outline: none;
+    }
+
+
+    &:checked + label::after{
+      font-family: "Ionicons";
+      content: "\f122";
+      font-size: 15px;
+    }
+
+    &:disabled + label{
+      opacity: 0.5;
+    }
+  }
+}
+
+.abc-radio {
+
+  label {
+
+    &::after {
+      width: 10px;
+      height: 10px;
+      top: 7.5px;
+      left: 6px;
+    }
+  }
+
+  input[type="radio"] {
+
+    &:focus + label::before {
+      outline: none;
+    }
+  }
+}
